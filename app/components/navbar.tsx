@@ -1,50 +1,52 @@
-import React from "react";
+"use client";
+
+import { Moon, Sun } from "lucide-react";
+import { useEffect, useState } from "react";
 
 export default function Navbar() {
+  const [dark, setDark] = useState(false);
+
+  useEffect(() => {
+    setDark(document.documentElement.classList.contains("dark"));
+  }, []);
+
+  function toggleTheme() {
+    const next = !document.documentElement.classList.contains("dark");
+    document.documentElement.classList.toggle("dark", next);
+    localStorage.setItem("theme", next ? "dark" : "light");
+    setDark(next);
+  }
+
   return (
-    <header>
-      <nav className="w-full px-6 py-4 flex justify-between items-center border-b border-gray-200 bg-white/95 backdrop-blur fixed top-0 left-0 z-50">
-        <a
-          href="#about"
-          className="font-bold text-xl tracking-tight text-gray-900 focus:outline-none focus:ring-2 ring-gray-400 transition"
+    <header className="nav">
+      <a href="#" className="nav-logo">
+        KS
+      </a>
+      <div className="nav-right">
+        <nav className="nav-links" aria-label="Main">
+          <a href="#projects">Projects</a>
+          <span className="nav-dot" aria-hidden="true">
+            ·
+          </span>
+          <a href="#experience">Experience</a>
+          <span className="nav-dot" aria-hidden="true">
+            ·
+          </span>
+          <a href="#skills">Skills</a>
+          <span className="nav-dot" aria-hidden="true">
+            ·
+          </span>
+          <a href="#contact">Contact</a>
+        </nav>
+        <button
+          type="button"
+          className="theme-toggle"
+          onClick={toggleTheme}
+          aria-label={dark ? "Switch to light mode" : "Switch to dark mode"}
         >
-          Kushall Saraf
-        </a>
-        <ul className="space-x-6 flex text-base">
-          <li>
-            <a
-              href="#about"
-              className="text-gray-700 hover:text-black transition-colors focus:outline-none focus:ring-2 ring-gray-400"
-            >
-              Home
-            </a>
-          </li>
-          <li>
-            <a
-              href="#experience"
-              className="text-gray-700 hover:text-black transition-colors focus:outline-none focus:ring-2 ring-gray-400"
-            >
-              Experience
-            </a>
-          </li>
-          <li>
-            <a
-              href="#projects"
-              className="text-gray-700 hover:text-black transition-colors focus:outline-none focus:ring-2 ring-gray-400"
-            >
-              Projects
-            </a>
-          </li>
-          <li>
-            <a
-              href="#contact"
-              className="text-gray-700 hover:text-black transition-colors focus:outline-none focus:ring-2 ring-gray-400"
-            >
-              Contact
-            </a>
-          </li>
-        </ul>
-      </nav>
+          {dark ? <Sun size={15} /> : <Moon size={15} />}
+        </button>
+      </div>
     </header>
   );
 }

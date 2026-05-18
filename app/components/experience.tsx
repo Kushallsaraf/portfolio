@@ -1,14 +1,39 @@
-import React from "react";
+const experiences = [
+  {
+    role: "[Job Title]",
+    company: "[Company Name]",
+    date: "[Start] — [End]",
+  },
+  {
+    role: "[Job Title]",
+    company: "[Company Name]",
+    date: "[Start] — Present",
+  },
+  {
+    role: "[Job Title]",
+    company: "[Company Name]",
+    date: "[Start] — [End]",
+  },
+];
 
 export default function Experience() {
   return (
-    <section
-      id="experience"
-      className="min-h-[80vh] flex flex-col items-center justify-center text-center px-6 py-16 bg-white"
-    >
-      <h1 className="text-4xl sm:text-5xl font-extrabold mb-4 text-gray-900">
-        Experience
-      </h1>
+    <section id="experience" className="section">
+      <div className="page">
+        <p className="section-label">② Experience</p>
+        <div className="experience-list">
+          {experiences.map((item) => (
+            <div key={`${item.role}-${item.company}`} className="experience-item">
+              <span className="experience-dot" aria-hidden="true" />
+              <div className="experience-content">
+                <p className="experience-role">{item.role}</p>
+                <p className="experience-company">{item.company}</p>
+              </div>
+              <p className="experience-date">{item.date}</p>
+            </div>
+          ))}
+        </div>
+      </div>
     </section>
   );
 }
