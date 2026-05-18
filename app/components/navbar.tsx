@@ -20,33 +20,31 @@ export default function Navbar() {
   return (
     <header className="nav">
       <a href="#" className="nav-logo">
-        KS
+        Kushall Saraf
       </a>
-      <div className="nav-right">
-        <nav className="nav-links" aria-label="Main">
-          <a href="#projects">Projects</a>
-          <span className="nav-dot" aria-hidden="true">
-            ·
-          </span>
-          <a href="#experience">Experience</a>
-          <span className="nav-dot" aria-hidden="true">
-            ·
-          </span>
-          <a href="#skills">Skills</a>
-          <span className="nav-dot" aria-hidden="true">
-            ·
-          </span>
-          <a href="#contact">Contact</a>
-        </nav>
-        <button
-          type="button"
-          className="theme-toggle"
-          onClick={toggleTheme}
-          aria-label={dark ? "Switch to light mode" : "Switch to dark mode"}
-        >
-          {dark ? <Sun size={15} /> : <Moon size={15} />}
-        </button>
-      </div>
+      <nav className="nav-links" aria-label="Main">
+        <a href="#projects">Projects</a>
+        <span className="nav-dot" aria-hidden="true">
+          ·
+        </span>
+        <a href="#experience">Experience</a>
+        <span className="nav-dot" aria-hidden="true">
+          ·
+        </span>
+        <a href="#skills">Skills</a>
+        <span className="nav-dot" aria-hidden="true">
+          ·
+        </span>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button
+        type="button"
+        className="theme-toggle"
+        onClick={toggleTheme}
+        aria-label={dark ? "Switch to light mode" : "Switch to dark mode"}
+      >
+        {dark ? <Sun size={15} /> : <Moon size={15} />}
+      </button>
     </header>
   );
 }

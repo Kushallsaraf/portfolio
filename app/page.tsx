@@ -19,11 +19,7 @@ export default function Home() {
     <main>
       <section className="hero">
         <div className="page">
-          <p className="hero-eyebrow">
-            CS Undergrad · Available for internships
-          </p>
           <h1 className="hero-name">Kushall Saraf</h1>
-          <p className="hero-name hero-name-muted">builds things for the web.</p>
           <p className="hero-bio">
             [Short bio — who you are, what you care about, and what kind of
             work you&apos;re looking for. Keep it to 2–3 sentences.]
