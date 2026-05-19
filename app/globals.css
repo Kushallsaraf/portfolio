@@ -211,32 +211,50 @@ button {
 
 /* Projects */
 .projects-grid {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
 }
 
 .project-card {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  min-height: 180px;
-  padding: 28px 32px;
+  overflow: hidden;
   border: 0.5px solid var(--border);
   border-radius: 12px;
   background: var(--bg);
 }
 
-.project-number {
-  font-size: calc(11px * var(--font-scale));
+.project-preview {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  background: var(--text);
+}
+
+.dark .project-preview {
+  background: var(--bg-secondary);
+}
+
+.project-preview-title {
+  font-size: calc(22px * var(--font-scale));
+  font-weight: 500;
   color: var(--text-muted);
-  opacity: 0.5;
-  margin-bottom: 8px;
+  text-align: center;
+  padding: 0 24px;
+}
+
+.project-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 28px 32px;
 }
 
 .project-title {
   font-size: 20px;
-  font-weight: 500;
+  font-weight: 600;
   margin-bottom: 6px;
 }
 
@@ -244,7 +262,6 @@ button {
   font-size: 15px;
   color: var(--text-muted);
   line-height: 1.65;
-  max-width: 680px;
   margin-bottom: 12px;
 }
 
@@ -268,6 +285,7 @@ button {
   align-items: center;
   gap: 12px;
   padding-top: 8px;
+  margin-top: auto;
   border-top: 0.5px solid var(--border);
 }
 
@@ -410,6 +428,10 @@ button {
 @media (max-width: 640px) {
   .nav-links {
     display: none;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
   }
 
   .experience-date {

@@ -1,18 +1,8 @@
 const experiences = [
   {
-    role: "[Job Title]",
-    company: "[Company Name]",
-    date: "[Start] — [End]",
-  },
-  {
-    role: "[Job Title]",
-    company: "[Company Name]",
-    date: "[Start] — Present",
-  },
-  {
-    role: "[Job Title]",
-    company: "[Company Name]",
-    date: "[Start] — [End]",
+    role: "Community Director",
+    company: "University of Toronto Mississauga Residence Council (UTMRC)",
+    date: "January 2025 – May 2025",
   },
 ];
 

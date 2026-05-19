@@ -3,31 +3,20 @@ import { ExternalLink } from "lucide-react";
 
 const projects = [
   {
-    number: "01",
-    title: "[Project Title]",
+    title: "Game Central",
     description:
-      "[Short description of what this project does and why it matters.]",
-    tech: ["[Tech 1]", "[Tech 2]", "[Tech 3]"],
-    github: "#",
-    live: "#",
+      "Full-stack social gaming discovery platform with a recommendation engine, social networking features, and real-time metadata for 50,000+ games.",
+    tech: ["Java", "Firebase", "RAWG API", "Git"],
+    github: "https://github.com/Kushallsaraf/CSC207-Group-Project.git",
+    live: undefined,
   },
   {
-    number: "02",
-    title: "[Project Title]",
+    title: "MediScan",
     description:
-      "[Short description of what this project does and why it matters.]",
-    tech: ["[Tech 1]", "[Tech 2]", "[Tech 3]"],
-    github: "#",
-    live: "#",
-  },
-  {
-    number: "03",
-    title: "[Project Title]",
-    description:
-      "[Short description of what this project does and why it matters.]",
-    tech: ["[Tech 1]", "[Tech 2]", "[Tech 3]"],
-    github: "#",
-    live: "#",
+      "Barcode-scanning app that compares OTC medication prices and suggests cheaper generic alternatives. Won 3rd place at DeerHacks (130+ participants).",
+    tech: ["Python", "Flask", "OpenCV", "Barcode API"],
+    github: undefined,
+    live: undefined,
   },
 ];
 
@@ -37,42 +26,54 @@ export default function Projects() {
       <div className="page">
         <p className="section-label">① Projects</p>
         <div className="projects-grid">
-          {projects.map((project) => (
-            <article key={project.number} className="project-card">
-              <div>
-                <p className="project-number">{project.number}</p>
-                <h3 className="project-title">{project.title}</h3>
-                <p className="project-desc">{project.description}</p>
-                <div className="project-tags">
-                  {project.tech.map((tag) => (
-                    <span key={tag} className="project-tag">
-                      {tag}
-                    </span>
-                  ))}
+          {projects.map((project) => {
+            const hasLinks = project.github || project.live;
+
+            return (
+              <article key={project.title} className="project-card">
+                <div className="project-preview">
+                  <span className="project-preview-title">{project.title}</span>
                 </div>
-              </div>
-              <div className="project-links">
-                <a
-                  href={project.github}
-                  className="project-link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Github size={13} />
-                  GitHub
-                </a>
-                <a
-                  href={project.live}
-                  className="project-link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <ExternalLink size={13} />
-                  Live
-                </a>
-              </div>
-            </article>
-          ))}
+                <div className="project-body">
+                  <h3 className="project-title">{project.title}</h3>
+                  <p className="project-desc">{project.description}</p>
+                  <div className="project-tags">
+                    {project.tech.map((tag) => (
+                      <span key={tag} className="project-tag">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                  {hasLinks && (
+                    <div className="project-links">
+                      {project.github && (
+                        <a
+                          href={project.github}
+                          className="project-link"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <Github size={13} />
+                          GitHub
+                        </a>
+                      )}
+                      {project.live && (
+                        <a
+                          href={project.live}
+                          className="project-link"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <ExternalLink size={13} />
+                          Live
+                        </a>
+                      )}
+                    </div>
+                  )}
+                </div>
+              </article>
+            );
+          })}
         </div>
       </div>
     </section>

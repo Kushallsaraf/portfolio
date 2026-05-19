@@ -4,14 +4,26 @@ import { Github, Linkedin } from "@/app/components/icons";
 import { Mail } from "lucide-react";
 
 const skills = [
-  "[Skill 1]",
-  "[Skill 2]",
-  "[Skill 3]",
-  "[Skill 4]",
-  "[Skill 5]",
-  "[Skill 6]",
-  "[Skill 7]",
-  "[Skill 8]",
+  "Python",
+  "Java",
+  "C",
+  "JavaScript",
+  "HTML/CSS",
+  "SQL",
+  "NumPy",
+  "Pandas",
+  "NLTK",
+  "Django",
+  "HTMX",
+  "Flask",
+  "JavaFX",
+  "Firebase",
+  "Git",
+  "OpenCV",
+  "NLP",
+  "Corpus Linguistics",
+  "Sentiment Analysis",
+  "Statistical Modelling",
 ];
 
 export default function Home() {
@@ -21,10 +33,11 @@ export default function Home() {
         <div className="page">
           <h1 className="hero-name">Kushall Saraf</h1>
           <p className="hero-bio">
-            [Short bio — who you are, what you care about, and what kind of
-            work you&apos;re looking for. Keep it to 2–3 sentences.]
+            CS undergrad at the University of Toronto studying Computer Science,
+            Statistics, and Economics. I build full-stack web apps and enjoy
+            working at the intersection of software and data.
           </p>
-          <span className="hero-location">[City, State]</span>
+          <span className="hero-location">Toronto, CA</span>
           <div className="hero-ctas">
             <a href="#projects" className="btn-primary">
               View Projects
@@ -57,11 +70,14 @@ export default function Home() {
           <p className="section-label">Contact</p>
           <h2 className="contact-heading">Let&apos;s work together.</h2>
           <p className="contact-text">
-            [Open to internships, collaborations, or just a conversation. Feel
-            free to reach out.]
+            Open to internships, collaborations, or just a conversation. Feel
+            free to reach out.
           </p>
-          <a href="mailto:[YOUR_EMAIL]" className="contact-email">
-            [your.email@example.com]
+          <a
+            href="mailto:kushall.saraf@mail.utoronto.ca"
+            className="contact-email"
+          >
+            kushall.saraf@mail.utoronto.ca
           </a>
         </div>
       </section>
@@ -70,7 +86,7 @@ export default function Home() {
         <span>© 2025 Kushall Saraf</span>
         <div className="footer-links">
           <a
-            href="[GITHUB_URL]"
+            href="https://github.com/Kushallsaraf"
             className="footer-link"
             target="_blank"
             rel="noopener noreferrer"
