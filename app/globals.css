@@ -343,6 +343,50 @@ button {
   color: var(--text-muted);
 }
 
+.experience-meta {
+  margin-top: 4px;
+  font-size: calc(11px * var(--font-scale));
+  color: var(--text-muted);
+}
+
+.experience-description {
+  max-width: 620px;
+  margin-top: 16px;
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.experience-highlights {
+  display: grid;
+  gap: 8px;
+  max-width: 620px;
+  margin-top: 12px;
+  padding-left: 18px;
+  color: var(--text-muted);
+}
+
+.experience-highlights li::marker {
+  color: var(--border);
+}
+
+.experience-links {
+  display: flex;
+  gap: 14px;
+  margin-top: 16px;
+}
+
+.experience-links a {
+  font-size: calc(11px * var(--font-scale));
+  color: var(--text-muted);
+  border-bottom: 0.5px solid var(--border);
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.experience-links a:hover {
+  color: var(--text);
+  border-color: var(--text);
+}
+
 .experience-date {
   flex-shrink: 0;
   font-size: calc(11px * var(--font-scale));
@@ -435,6 +479,15 @@ button {
   }
 
   .experience-date {
-    display: none;
+    margin: 4px 0 0 22px;
+  }
+
+  .experience-item {
+    flex-wrap: wrap;
+    padding: 22px;
+  }
+
+  .experience-content {
+    flex-basis: calc(100% - 22px);
   }
 }
