@@ -6,11 +6,11 @@ const experiences = [
     date: "May 2026 – Present",
     meta: "Supervisor: Arpit Narechania · Funded by the University of Toronto",
     description:
-      "Contributing to research on natural-language interfaces for authoring and styling data visualizations.",
+      "Working with the DataVISards research group on natural-language interfaces for generating, styling, and evaluating data visualizations.",
     highlights: [
-      "Extended an NL4DV demonstration with multi-provider LLM support and multimodal visualization styling workflows.",
-      "Conducted adversarial testing across languages and datasets to identify JSON-contract, model-output, and Vega-Lite reliability issues.",
-      "Developing a multilingual ReVISit user study with localized questionnaires, RTL support, and adaptive visualization layouts.",
+      "Engineered multi-provider model selection and a second-stage NL4DV-Stylist workflow supporting text instructions and up to five example charts.",
+      "Designed adversarial multilingual tests that exposed response-schema, dataset-field, error-handling, and Vega-Lite validation failures.",
+      "Building an ongoing ReVISit study with localized consent and questionnaires, stable response coding, RTL support, and participant-specific language assignments.",
     ],
     links: [
       {
@@ -28,7 +28,8 @@ const experiences = [
     company: "University of Toronto Mississauga Residence Council (UTMRC)",
     date: "January 2025 – May 2025",
     meta: undefined,
-    description: undefined,
+    description:
+      "Represented students through residence council initiatives and helped strengthen community programming at UTM.",
     highlights: [],
     links: [],
   },

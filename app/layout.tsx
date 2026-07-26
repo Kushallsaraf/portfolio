@@ -3,8 +3,9 @@ import "./globals.css";
 import Navbar from "@/app/components/navbar";
 
 export const metadata: Metadata = {
-  title: "Kushall Saraf",
-  description: "Portfolio of Kushall Saraf — CS undergrad building things for the web.",
+  title: "Kushall Saraf — Software Developer & Researcher",
+  description:
+    "Portfolio of Kushall Saraf, a University of Toronto student building full-stack applications and researching natural-language interfaces for data visualization.",
 };
 
 const themeScript = `

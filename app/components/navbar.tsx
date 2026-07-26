@@ -1,20 +1,12 @@
 "use client";
 
 import { Moon, Sun } from "lucide-react";
-import { useEffect, useState } from "react";
 
 export default function Navbar() {
-  const [dark, setDark] = useState(false);
-
-  useEffect(() => {
-    setDark(document.documentElement.classList.contains("dark"));
-  }, []);
-
   function toggleTheme() {
     const next = !document.documentElement.classList.contains("dark");
     document.documentElement.classList.toggle("dark", next);
     localStorage.setItem("theme", next ? "dark" : "light");
-    setDark(next);
   }
 
   return (
@@ -41,9 +33,10 @@ export default function Navbar() {
         type="button"
         className="theme-toggle"
         onClick={toggleTheme}
-        aria-label={dark ? "Switch to light mode" : "Switch to dark mode"}
+        aria-label="Toggle color theme"
       >
-        {dark ? <Sun size={15} /> : <Moon size={15} />}
+        <Sun className="theme-icon-light" size={15} aria-hidden="true" />
+        <Moon className="theme-icon-dark" size={15} aria-hidden="true" />
       </button>
     </header>
   );
